@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import react from "react";
+import theme from "./logo.jpeg"
 
 function App() {
+  const message ="About me";
+  const greeting="Hello,"
+  const name="I'm Tharshajini Vimalathas from Sangaththanai.";
+  
+  const fName="Tharshajini";
+  const lName="Vimalathas";
+  const description=`this is ${fName} ${lName}`;
+  const image= <img src={theme} alt="theme for website"/>;
+
+  const welcome =(props) => {
+    return <div>{props.children}</div>
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <welcome>
+      
+      <h1>{message}</h1>
+      <div>
+        <p>{name}</p>
+        <p>{description}</p>
+      </div>
+      {image}
+    </welcome>
   );
 }
 
