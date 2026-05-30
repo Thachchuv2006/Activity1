@@ -1,5 +1,6 @@
-import react from "react";
+import React from "react";
 import theme from "./logo.jpeg"
+import { type } from "@testing-library/user-event/dist/type";
 
 function App() {
   const message ="About me";
@@ -15,6 +16,15 @@ function App() {
     return <div>{props.children}</div>
   };
   
+  const element = React.createElement(
+    "button",
+    {
+      className:"btn",
+      onClick:()=> alert("Clicked!"),
+    },
+    "Click me"
+  );
+
   return (
     <welcome>
       
@@ -24,6 +34,7 @@ function App() {
         <p>{description}</p>
       </div>
       {image}
+      <div>{element}</div>
     </welcome>
   );
 }
