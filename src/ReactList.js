@@ -48,8 +48,9 @@ function ReactList() {
                 user.age>30?(
                     <li key={user.id}>{user.name} is over 30 years old.</li>)
                     :(<li keys={user.id}>{user.name} is under 30 years old.</li>)
+                 )}       
             </ul>
-                )}
+                
         </div>
     )
 };
